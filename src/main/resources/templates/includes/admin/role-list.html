@@ -1,0 +1,111 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://wwww.utraq.net.nz/thymeleaf/layout"
+	layout:decorator="/admin/admin_layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container">
+
+		<div class="box">
+			<div class="box-header">
+				<h3>Table user list</h3>
+			</div>
+			<div class="row p-a">
+			<!--
+				<div class="col-sm-5">
+				 	<select class="input-sm form-control w-sm inline v-middle">
+						<option value="0">Bulk action</option>
+						<option value="1">Delete selected</option>
+						<option value="2">Bulk edit</option>
+						<option value="3">Export</option>
+					</select>
+					<button class="btn btn-sm white">Apply</button>
+				</div> 
+				<div class="col-sm-4"></div>
+				<div class="col-sm-3">
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="Search">
+						<span class="input-group-btn">
+							<button class="btn b-a white" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="table-responsive">
+				<table class="table table-striped b-t">
+					<thead>
+						<tr>
+							<th style="width: 20px;"><label class="ui-check m-a-0">
+									<input type="checkbox" class="has-value"><i></i>
+							</label></th>
+							<th th:text="#{id}"></th>
+							<th th:text="#{username}"></th>
+							<th th:text="#{role}"></th>
+							<th style="width: 50px;"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><label class="ui-check m-a-0"><input
+									type="checkbox" name="post[]" class="has-value"><i
+									class="dark-white"></i></label></td>
+							<td>1</td>
+							<td>phen leng</td>
+							<td>admin</td>
+							<td><a href="" class="active" ui-toggle-class=""><i
+									class="fa fa-check text-success none"></i><i
+									class="fa fa-times text-danger inline"></i></a></td>
+						</tr>
+						<tr>
+							<td><label class="ui-check m-a-0"><input
+									type="checkbox" name="post[]" class="has-value"><i
+									class="dark-white"></i></label></td>
+							<td>2</td>
+							<td>sock jojo</td>
+							<td>staff</td>
+							<td><a href="" ui-toggle-class=""><i
+									class="fa fa-check text-success none"></i><i
+									class="fa fa-times text-danger inline"></i></a></td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+			</div>
+			<footer class="dker p-a">
+				<div class="row">
+					<div class="col-sm-4 hidden-xs">
+						<select class="input-sm form-control w-sm inline v-middle">
+							<option value="0">Bulk action</option>
+							<option value="1">Delete selected</option>
+							<option value="2">Bulk edit</option>
+							<option value="3">Export</option>
+						</select>
+						<button class="btn btn-sm white">Apply</button>
+					</div>
+					<div class="col-sm-4 text-center">
+						<small class="text-muted inline m-t-sm m-b-sm">showing
+							20-30 of 50 items</small>
+					</div>
+					<div class="col-sm-4 text-right text-center-xs">
+						<ul class="pagination pagination-sm m-a-0">
+							<li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+							<li class="active"><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">5</a></li>
+							<li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

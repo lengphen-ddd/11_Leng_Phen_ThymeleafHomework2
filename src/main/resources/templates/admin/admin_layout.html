@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://wwww.utraq.net.nz/thymeleaf/layout">
+	
+<head>
+<title layout:title-patter="$CONTENT_TITLE - $DECORATOR_TITLE">Layout format</title>
+<style th:replace="@{/includes/admin/_style}"></style>
+</head>
+<body>
+
+<div th:replace="@{/includes/admin/_left_side_bar}"></div>
+<div id="content" class="app-content box-shadow-z0" role="main">
+	<div th:replace="@{/includes/admin/_header}"></div>
+	<div layout:fragment="content">
+		
+		<!-- Body here content -->
+
+	</div>
+</div>
+<div th:replace="@{/includes/admin/_right_side_bar}"></div>
+<div th:replace="@{/includes/admin/_footer}"></div>
+
+<div th:replace="@{/includes/admin/_script}"></div>
+
+</body>
+</html>
